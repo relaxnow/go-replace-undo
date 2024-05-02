@@ -9,3 +9,9 @@ export GOPATH=`go env GOPATH` &&
 export PATH="$GOPATH/bin:$PATH" &&
 go install github.com/relaxnow/go-replace-undo@latest
 ```
+
+## Run
+
+```
+go-replace-undo path/to/project/go.mod
+```
