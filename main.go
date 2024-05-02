@@ -12,7 +12,7 @@ import (
 
 func main() {
 	if len(os.Args) < 2 {
-		fmt.Println("Usage: go run main.go /path/to/go.mod")
+		fmt.Println("Usage: go-replace-undo /path/to/go.mod")
 		return
 	}
 
