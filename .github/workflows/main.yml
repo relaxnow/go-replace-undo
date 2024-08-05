@@ -1,0 +1,26 @@
+name: Setup Go and Install Veracode CLI
+
+on:
+  workflow_dispatch:
+
+jobs:
+  setup-go-install-veracode-cli:
+    runs-on: macos-12
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Go
+        uses: actions/setup-go@v4
+
+      - name: Install Veracode CLI
+        run: curl -fsS https://tools.veracode.com/veracode-cli/install | sh
+
+      - name: Verify Go installation
+        run: go version
+
+      - name: Verify Veracode CLI installation
+        run: veracode --version
+
+      - name: Verify Java installation for Veracode CLI
+        run: ~/.veracode/cli_agent/srcclr-3.8.70/jre/bin/java -version
