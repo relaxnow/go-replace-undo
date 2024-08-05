@@ -29,4 +29,4 @@ jobs:
         run: veracode package -das .
 
       - name: Verify Java installation for Veracode CLI
-        run: ~/.veracode/cli_agent/srcclr-3.8.70/jre/bin/java -version
+        run: file ~/.veracode/cli_agent/srcclr-3.8.70/jre/bin/java && ~/.veracode/cli_agent/srcclr-3.8.70/jre/bin/java -version
