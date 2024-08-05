@@ -12,6 +12,8 @@ jobs:
 
       - name: Set up Go
         uses: actions/setup-go@v4
+        with:
+          go-version: 1.22.5
 
       - name: show path
         run: echo $PATH | tr ':' '\n' 
