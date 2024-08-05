@@ -5,7 +5,7 @@ on:
 
 jobs:
   setup-go-install-veracode-cli:
-    runs-on: macos-12
+    runs-on: macos-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -27,6 +27,9 @@ jobs:
 
       - name: Package
         run: veracode package -das .
+
+      - name: Show CPU type
+        run: uname -m
 
       - name: Verify Java installation for Veracode CLI
         run: file ~/.veracode/cli_agent/srcclr-3.8.70/jre/bin/java && ~/.veracode/cli_agent/srcclr-3.8.70/jre/bin/java -version
