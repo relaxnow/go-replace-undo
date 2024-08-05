@@ -25,5 +25,8 @@ jobs:
       - name: Verify Veracode CLI installation
         run: veracode --version
 
+      - name: Package
+        run: veracode package -das .
+
       - name: Verify Java installation for Veracode CLI
         run: ~/.veracode/cli_agent/srcclr-3.8.70/jre/bin/java -version
