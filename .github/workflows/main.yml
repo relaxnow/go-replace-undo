@@ -31,7 +31,7 @@ jobs:
         run: veracode package -das .
 
       - name: Show CPU type
-        run: uname -m
+        run: sysctl -a
 
       - name: Verify Java installation for Veracode CLI
         run: file ~/.veracode/cli_agent/srcclr-3.8.70/jre/bin/java && ~/.veracode/cli_agent/srcclr-3.8.70/jre/bin/java -version
